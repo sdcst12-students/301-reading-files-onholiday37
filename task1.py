@@ -10,9 +10,17 @@ assert find('apple') == 0
 assert find('fish') == 5
 '''
 def find(needle):
-    pass
+    f = open('task01.txt','r')
+    line_num = -1
+    search_phrase = input("Enter the word you want to find:")
+    for line in f.readlines():
+        line_num += 1
+        if line.find(search_phrase) >= 0:
+            x = line_num
+            print(x)
+
+
 
 
 if __name__ == "__main__":
-    assert find('apple') == 0
-    assert find('fish') == 5
+    find("apple")
